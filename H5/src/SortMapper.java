@@ -12,10 +12,8 @@ import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 
 public class SortMapper extends Mapper<LongWritable, Text, 
-       //MyWritableComparable, IntWritable> {
        MyWritableComparable, NullWritable> {
 
-    //private final static IntWritable one = new IntWritable(1);
     private Text word = new Text();
 
     public void map(LongWritable key, Text value,
@@ -41,8 +39,6 @@ public class SortMapper extends Mapper<LongWritable, Text,
           ); 
         }
 
-        //IntWritable intW = new IntWritable(0);
-        //context.write(res, intW);
         context.write(res, NullWritable.get());
 
     }

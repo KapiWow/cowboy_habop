@@ -1,0 +1,4 @@
+#!/bin/sh
+mkdir -p build
+export CLASSPATH=/gnu/store/dcbpxj45hw3mpwrh54palw68icflrd6a-spark-3.0.0-preview2/jars/*:/gfs/jars/lucene/6.2.0/lucene-core-6.2.0.jar:/gfs/jars/lucene/6.2.0/lucene-analyzers-common-6.2.0.jar
+scalac -deprecation -d build/wordcount.jar src/Main.scala

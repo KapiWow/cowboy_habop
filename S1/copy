@@ -1,0 +1,6 @@
+#!/bin/sh
+
+rm -rf ~/spark_res
+hdfs dfs -copyToLocal /user/KapiWowBigdata/output-spark ~/spark_res
+
+
